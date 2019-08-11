@@ -1,8 +1,8 @@
 {
   "connection": "default",
-  "collectionName": "brand",
+  "collectionName": "brew",
   "info": {
-    "name": "brand",
+    "name": "brew",
     "description": ""
   },
   "options": {
@@ -13,8 +13,6 @@
   },
   "attributes": {
     "name": {
-      "unique": true,
-      "required": true,
       "type": "string"
     },
     "description": {
@@ -26,9 +24,12 @@
       "plugin": "upload",
       "required": true
     },
-    "brews": {
-      "collection": "brew",
-      "via": "brand"
+    "price": {
+      "type": "decimal"
+    },
+    "brand": {
+      "model": "brand",
+      "via": "brews"
     }
   }
 }
